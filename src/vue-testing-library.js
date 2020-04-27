@@ -88,6 +88,7 @@ function render(
       wrapper.setProps(_)
       return waitFor(() => {})
     },
+    setProps: props => wrapper.setProps(props),
     ...getQueriesForElement(baseElement),
   }
 }
