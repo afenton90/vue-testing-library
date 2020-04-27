@@ -1,4 +1,4 @@
-import {createLocalVue, mount} from '@vue/test-utils'
+import {mount} from '@vue/test-utils'
 
 import {
   getQueriesForElement,
@@ -103,9 +103,9 @@ function cleanupAtWrapper(wrapper) {
     document.body.removeChild(wrapper.element.parentNode)
   }
 
-  if (wrapper.isVueInstance()) {
-    wrapper.destroy()
-  }
+  // if (wrapper.isVueInstance()) {
+  wrapper.unmount()
+  // }
 
   mountedWrappers.delete(wrapper)
 }
